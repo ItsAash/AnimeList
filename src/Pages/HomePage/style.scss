@@ -1,108 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap");
 
-header {
-  padding-bottom: 25px;
-  margin-top: 25px;
-  font-family: Poppins, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 23px;
-  line-height: 24px;
-  /* or 83% */
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.2px;
+.homepage {
+  .homepage__buttonWave {
+    position: absolute;
+    width: 100vw;
+    left: 0px;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.45;
+  }
 
-  color: #4452fe;
-
-  .homepage__main {
-    width: 70vw;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-
-    nav {
-      display: flex;
-      flex-direction: row;
-
-      width: 30vw;
-
-      justify-content: space-evenly;
-      align-items: center;
-
-      font-family: Poppins, sans-serif;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 24px;
-      /* identical to box height, or 150% */
-
-      text-align: center;
-      letter-spacing: 0.2px;
-
-      /* light text */
-
-      color: #ffffff;
-
-      a {
-        // text-transform: uppercase;
-        text-decoration: none;
-        color: #fff;
-        position: relative;
-        cursor: pointer;
-
-        &:after {
-          background: none repeat scroll 0 0 transparent;
-          bottom: 0;
-          content: "";
-          display: block;
-          height: 2px;
-          left: 50%;
-          position: absolute;
-          background: #fff;
-          transition: width 0.3s ease 0s, left 0.3s ease 0s;
-          width: 0;
-        }
-
-        &:hover:after {
-          width: 100%;
-          left: 0;
-        }
-      }
-    }
-
-    .login__button {
-      width: 96px;
-      padding: 5px;
-
-      outline: none;
-      background: none;
-
-      color: white;
-      cursor: pointer;
-
-      font-weight: 500;
-      font-family: "Poppins", sans-serif;
-      transition: ease-in-out 300ms;
-
-      border: 1px solid #e5e5e5;
-      box-sizing: border-box;
-      /* shadow */
-    }
+  .homepage__topWave {
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    opacity: 0.5;
+    z-index: -1;
   }
 }
 
 .screen {
   color: #fff;
-  padding: 100px;
+  margin-top: 15vh;
 
   .screen__container {
-    width: 50vw;
+    width: 70vw;
     margin: 0 auto;
 
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     .text__container {
       font-family: Arimo, sans-serif;
@@ -117,10 +45,12 @@ header {
 
       .big__text {
         font-size: 60px;
+        text-align: center;
       }
 
       .small__text {
         font-size: 16px;
+        text-align: center;
         font-weight: 400;
         line-height: 25px;
         margin: 25px auto 25px auto;
@@ -137,7 +67,7 @@ header {
 
       .button__style1 {
         width: 122px;
-        padding: 10px;
+        padding: 15px;
 
         outline: none;
         background: none;
@@ -145,7 +75,7 @@ header {
         color: white;
         cursor: pointer;
 
-        font-weight: 500;
+        font-weight: 400;
         font-family: "Poppins", sans-serif;
         transition: ease-in-out 300ms;
 
@@ -163,19 +93,36 @@ header {
   }
 }
 
-.homepage__buttonWave {
-  position: absolute;
-  width: 100vw;
-  left: 0px;
-  bottom: 0;
-  z-index: -1;
-  opacity: 0.45;
+// mobiles
+@media screen and (max-width: 568px) {
+  .screen {
+    overflow: hidden;
+    margin-top: 20%;
+
+    padding: 60px;
+    .screen__container {
+      width: 100%;
+      .text__container {
+        .big__text {
+          font-size: 33px;
+          width: 110%;
+        }
+        .small__text {
+          width: 110%;
+          font-size: 14px;
+        }
+      }
+    }
+  }
 }
 
-.homepage__topWave {
-  position: absolute;
-  width: 100vw;
-  top: 0;
-  opacity: 0.5;
-  z-index: -1;
+@media screen and (max-width: 350px) {
+  .link__container {
+    flex-direction: column !important;
+    align-items: center;
+    margin: 0 !important;
+    button {
+      margin-top: 10px;
+    }
+  }
 }

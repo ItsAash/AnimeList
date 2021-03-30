@@ -3,33 +3,15 @@ import "./style.scss";
 import bottomWave from "../../assests/bottomWave.svg";
 import topWave from "../../assests/topWave.svg";
 
+import Header from "../../components/header";
+
 function HomePage() {
   return (
     <div className="homepage">
       <img className="homepage__buttonWave" src={bottomWave} alt="wave"></img>
       <img className="homepage__topWave" src={topWave} alt="wave"></img>
 
-      <header>
-        <div className="homepage__main">
-          <div className="logo">AnimeList</div>
-          <nav>
-            <a href="#" className="nav__element">
-              Anime
-            </a>
-            <a href="#" className="nav__element">
-              Manga
-            </a>
-            <a href="#" className="nav__element">
-              About
-            </a>
-            <a href="#" className="nav__element">
-              Help
-            </a>
-          </nav>
-
-          <button className="login__button">Login</button>
-        </div>
-      </header>
+      <Header />
 
       <div className="screen">
         <div className="screen__container">
