@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { Link } from "react-router-dom";
 import "./style.scss";
 
 export default function Header() {
@@ -28,7 +29,9 @@ export default function Header() {
     <>
       <header>
         <div className="homepage__main">
-          <div className="logo">AnimeList</div>
+          <Link to="/">
+            <div className="logo">AnimeList</div>
+          </Link>
           <nav>
             <a href="#" className="nav__element">
               Anime
@@ -44,7 +47,9 @@ export default function Header() {
             </a>
           </nav>
 
-          <button className="login__button">Login</button>
+          <Link to="/login">
+            <button className="login__button">Login</button>
+          </Link>
           <div className="hamburger" onClick={handleBurgerClick}>
             <div className="upper__bun bun"></div>
             <div className="lower__bun bun"></div>

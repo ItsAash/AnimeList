@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,400&display=swap");
+
+.main_container {
+  margin-top: 80px;
+  height: 100%;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.main {
+  width: 70vw;
+  height: 100%;
+  margin: 0 auto;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* border: white 2px solid; */
+}
+
+.register__main {
+  justify-content: space-evenly;
+}
+.left_container img {
+  width: 400px;
+}
+
+.right_container {
+  margin-top: -20px;
+}
+
+.avatar {
+  width: 90px;
+  border: white 2px solid;
+  border-radius: 50%;
+}
+
+.label {
+  margin-bottom: 7px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+input {
+  width: 200px;
+  height: 30px;
+  outline: none;
+  border: none;
+  background: #3a3a3a;
+  border-radius: 50px;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: white;
+}
+
+.login_container {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.login_form {
+  height: 400px;
+  background: #343434;
+  box-shadow: -4px -4px 4px rgb(255 255 255 / 4%), 4px 4px 4px rgb(0 0 0 / 4%);
+  border-radius: 10px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.register_form {
+  height: 100%;
+  padding: 2rem 0;
+  width: 500px;
+  input {
+    width: 300px;
+  }
+}
+
+#signin_button {
+  width: 96px;
+  margin-top: 10px;
+  padding: 5px;
+  outline: none;
+  border: none;
+  background: none;
+  color: white;
+  border: white 1px solid;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  transition: ease-in-out 300ms;
+}
+
+#signin_button:hover {
+  background: #6c63ff;
+}
+
+.login_avatar {
+  width: 200px;
+  margin: 0 auto;
+  /* height: 100%; */
+}
+
+@media (max-width: 880px) {
+  .left_container {
+    display: none;
+  }
+
+  .right_container {
+    translate: transform(-50%, -50%);
+    margin: 0 auto;
+  }
+}

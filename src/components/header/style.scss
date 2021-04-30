@@ -15,7 +15,12 @@ header {
   align-items: center;
   letter-spacing: 0.2px;
 
-  color: #4452fe;
+  .homepage__main > a:nth-child(1) {
+    text-decoration: none;
+  }
+  .logo {
+    color: var(--logo-color);
+  }
 
   .homepage__main {
     width: 70vw;
