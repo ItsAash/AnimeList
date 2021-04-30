@@ -33,18 +33,18 @@ export default function Header() {
             <div className="logo">AnimeList</div>
           </Link>
           <nav>
-            <a href="#" className="nav__element">
+            <Link to="#" className="nav__element">
               Anime
-            </a>
-            <a href="#" className="nav__element">
+            </Link>
+            <Link to="#" className="nav__element">
               Manga
-            </a>
-            <a href="#" className="nav__element">
+            </Link>
+            <Link to="#" className="nav__element">
               About
-            </a>
-            <a href="#" className="nav__element">
+            </Link>
+            <Link to="#" className="nav__element">
               Help
-            </a>
+            </Link>
           </nav>
 
           <Link to="/login">

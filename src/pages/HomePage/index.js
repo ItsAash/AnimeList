@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import "./style.scss";
@@ -6,16 +6,29 @@ import bottomWave from "../../assests/bottomWave.svg";
 import topWave from "../../assests/topWave.svg";
 
 import Header from "../../components/header";
+import Loading from "../../components/loading";
 
 function HomePage() {
-  return (
-    <div className="homepage">
-      <img className="homepage__buttonWave" src={bottomWave} alt="wave"></img>
-      <img className="homepage__topWave" src={topWave} alt="wave"></img>
+  const bottomWaveLoaded = useRef(false);
+  const topWaveLoaded = useRef(false);
 
-      <Header />
-      <Screen />
-    </div>
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(false);
+  }, [bottomWaveLoaded, topWaveLoaded]);
+
+  return (
+    <>
+      {loading && <Loading />}
+      <div className="homepage">
+        <img className="homepage__buttonWave" src={bottomWave} alt="wave"></img>
+        <img className="homepage__topWave" src={topWave} alt="wave"></img>
+
+        <Header />
+        <Screen />
+      </div>
+    </>
   );
 }
 
