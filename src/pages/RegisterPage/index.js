@@ -14,7 +14,12 @@ export default function RegisterPage() {
             <form className="login_form register_form">
               <div className="login_avatar">
                 <center>
-                  <img className="avatar" src={AvatarImage} alt="avatar" />
+                  <img
+                    className="avatar"
+                    onLoad={console.log("hello")}
+                    src={AvatarImage}
+                    alt="avatar"
+                  />
                 </center>
               </div>
               <div className="login_container">
