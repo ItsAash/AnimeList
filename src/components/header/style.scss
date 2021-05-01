@@ -88,6 +88,7 @@ header {
       color: white;
       cursor: pointer;
 
+      font-size: 14px;
       font-weight: 500;
       font-family: "Poppins", sans-serif;
       transition: ease-in-out 300ms;
@@ -126,12 +127,12 @@ header {
 }
 
 .mobile__menu {
-  transform: translateY(-150%);
+  // transform: translateY(-150%);
   top: 0;
   width: 100vw;
   height: 100vh;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.9);
   backdrop-filter: blur(20px);
   z-index: 1;
 
@@ -181,7 +182,6 @@ header {
     }
   }
 }
-
 @media screen and (max-width: 698px) {
   header .homepage__main {
     justify-content: space-evenly;
@@ -197,4 +197,34 @@ header {
       display: none;
     }
   }
+}
+
+.spinner {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  z-index: 200000;
+}
+
+// CSS TRANSITION FOR MBL MENU
+
+.mbl_menu-enter {
+  transform: translateY(-150%);
+  opacity: 0;
+}
+
+.mbl_menu-enter-active {
+  transform: translateY(0);
+  opacity: 1;
+  transition: opacity 300ms, transform 300ms;
+}
+
+.mbl_menu-exit {
+  opacity: 1;
+}
+
+.mbl_menu-exit-active {
+  opacity: 0;
+  transform: translateY(-150%);
+  transition: opacity 300ms, transform 300ms;
 }
